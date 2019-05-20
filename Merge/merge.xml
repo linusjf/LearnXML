@@ -1,0 +1,4 @@
+   <merge xmlns="http://informatik.hu-berlin.de/merge">
+      <file1>google_checks.xml</file1>
+      <file2>suppr.xml</file2>
+   </merge>
