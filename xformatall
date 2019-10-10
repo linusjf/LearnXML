@@ -1,0 +1,7 @@
+#!/bin/bash
+declare -r configFileName="tidy.config"
+find . -maxdepth 2 -type f -name "*.xml" \
+  ! -path "**/.git/**" \
+  | parallel -j 5 -I% \
+  tidy -config "$configFileName" -quiet -xml -m %
+exit $?

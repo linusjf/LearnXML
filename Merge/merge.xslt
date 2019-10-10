@@ -11,7 +11,8 @@
                 xmlns:xslt="http://www.w3.org/1999/XSL/Transform"
                 xmlns:m="http://informatik.hu-berlin.de/merge"
                 exclude-result-prefixes="m">
-
+<xslt:output doctype-system="https://checkstyle.org/dtds/configuration_1_3.dtd" 
+     doctype-public="--//Checkstyle//DTD Checkstyle Configuration 1.3//EN"/> 
 
 <!-- Normalize the contents of text, comment, and processing-instruction
      nodes before comparing?
