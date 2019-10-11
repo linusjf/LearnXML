@@ -75,4 +75,60 @@ echo -e '\n' '/bookstore/book[attribute::cat="textbook"]/price/text()' '\n'
 xpath -q -e \
   '/bookstore/book[attribute::cat="textbook"]/price/text()' \
   books.xml
+echo -e '\n' '//book/title | //book/price' '\n'
+xpath -q -e \
+  '//book/title | //book/price' \
+  books.xml
+echo -e '\n' '//title | //price' '\n'
+xpath -q -e \
+  '//title | //price' \
+  books.xml
+echo -e '\n' '/bookstore/book/title | //price' '\n'
+xpath -q -e \
+  '/bookstore/book/title | //price' \
+  books.xml
+echo -e '\n' '/bookstore/child::book' '\n'
+xpath -q -e \
+  '/bookstore/child::book' \
+  books.xml
+echo -e '\n' '/bookstore/child::book/title/attribute::lang' '\n'
+xpath -q -e \
+  '/bookstore/child::book/title/attribute::lang' \
+  books.xml
+echo -e '\n' '//bookstore/child::*' '\n'
+xpath -q -e \
+  '//bookstore/child::*' \
+  books.xml
+echo -e '\n' '//bookstore/child::*/attribute::*' '\n'
+xpath -q -e \
+  '//bookstore/child::*/attribute::*' \
+  books.xml
+echo -e '\n' '//bookstore/descendant::*/attribute::*' '\n'
+xpath -q -e \
+  '//bookstore/descendant::*/attribute::*' \
+  books.xml
+echo -e '\n' '//bookstore/descendant::*/child::text()' '\n'
+xpath -q -e \
+  '//bookstore/descendant::*/child::text()' \
+  books.xml
+echo -e '\n' '//bookstore/descendant::*/child::node()' '\n'
+xpath -q -e \
+  '//bookstore/descendant::*/child::node()' \
+  books.xml
+echo -e '\n' '//bookstore/descendant::book' '\n'
+xpath -q -e \
+  '//bookstore/descendant::book' \
+  books.xml
+echo -e '\n' '//bookstore/book/title/ancestor::book' '\n'
+xpath -q -e \
+  '//bookstore/book/title/ancestor::book' \
+  books.xml
+echo -e '\n' '//bookstore/book/ancestor-or-self::book' '\n'
+xpath -q -e \
+  '//bookstore/book/ancestor-or-self::book' \
+  books.xml
+echo -e '\n' '//bookstore/child::*/child::price' '\n'
+xpath -q -e \
+  '//bookstore/child::*/child::price' \
+  books.xml
 exit $?
