@@ -3,8 +3,56 @@ echo -e '\n' '/playlist/movie/title' '\n'
 xpath -q -e \
   '/playlist/movie/title' \
   playlist.xml
-  echo -e '\n' '/playlist/movie/title/text() | /playlist/movie/director/text() | /playlist/movie/running-time/text() | /playlist/movie/mpaa-rating/text() | /playlist/movie/cast/person/@name ' '\n'
+echo -e '\n' '/playlist/movie/title/text() | /playlist/movie/director/text() | /playlist/movie/running-time/text() | /playlist/movie/mpaa-rating/text() | /playlist/movie/cast/person/@name ' '\n'
 xpath -q -e \
   '/playlist/movie/title/text() | /playlist/movie/director/text() | /playlist/movie/running-time/text() | /playlist/movie/mpaa-rating/text() | /playlist/movie/cast/person/@name' \
+  playlist.xml
+echo -e '\n' '/playlist' '\n'
+xpath -q -e \
+  '/playlist' \
+  playlist.xml
+echo -e '\n' '//title' '\n'
+xpath -q -e \
+  '//title' \
+  playlist.xml
+echo -e '\n' '//movie/title' '\n'
+xpath -q -e \
+  '//movie/title' \
+  playlist.xml
+echo -e '\n' './title' '\n'
+xpath -q -e \
+  './title' \
+  playlist.xml
+echo -e '\n' '//title/..' '\n'
+xpath -q -e \
+  '//title/..' \
+  playlist.xml
+echo -e '\n' '/*' '\n'
+xpath -q -e \
+  '/*' \
+  playlist.xml
+echo -e '\n' '//person/@role' '\n'
+xpath -q -e \
+  '//person/@role' \
+  playlist.xml
+echo -e '\n' '//person/@*' '\n'
+xpath -q -e \
+  '//person/@*' \
+  playlist.xml
+echo -e '\n' '//person[@role]' '\n'
+xpath -q -e \
+  '//person[@role]' \
+  playlist.xml
+echo -e '\n' '//*[@url]' '\n'
+xpath -q -e \
+  '//*[@url]' \
+  playlist.xml
+echo -e '\n' '//*[@*]' '\n'
+xpath -q -e \
+  '//*[@*]' \
+  playlist.xml
+echo -e '\n' '/playlist//*[not(@*)]' '\n'
+xpath -q -e \
+  '/playlist//*[not(@*)]' \
   playlist.xml
 exit $?
