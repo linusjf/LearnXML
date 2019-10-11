@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 xsltproc --timing -o catalog.html transcatalog.xslt catalog.xml
+xsltproc --timing -o catalog1.html catalog.xml
 exit $?

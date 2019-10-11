@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+xsltproc --timing -o pricing.html transprice.xslt catalog.xml
+exit $?
