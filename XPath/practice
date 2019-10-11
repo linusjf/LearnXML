@@ -1,49 +1,77 @@
 #!/usr/bin/env bash
+echo -e '\n' 'bookstore' '\n'
 xpath -q -e \
   'bookstore' \
   books.xml
+echo -e '\n' '/bookstore' '\n'
 xpath -q -e \
   '/bookstore' \
   books.xml
+echo -e '\n' '/bookstore/book' '\n'
 xpath -q -e \
   '/bookstore/book' \
   books.xml
+echo -e '\n' '//book' '\n'
 xpath -q -e \
   '//book' \
   books.xml
+echo -e '\n' 'bookstore//book' '\n'
 xpath -q -e \
   'bookstore//book' \
   books.xml
+echo -e '\n' '//@lang' '\n'
 xpath -q -e \
   '//@lang' \
   books.xml
+  echo -e '\n' '/bookstore/book[1]' '\n'
 xpath -q -e \
   '/bookstore/book[1]' \
   books.xml
+  echo -e '\n' '/bookstore/book[last()]' '\n'
 xpath -q -e \
   '/bookstore/book[last()]' \
   books.xml
+echo -e '\n' '/bookstore/book[last()-1]' '\n'
 xpath -q -e \
   '/bookstore/book[last()-1]' \
   books.xml
+echo -e '\n' '//bookstore/book[position()<3]' '\n'
 xpath -q -e \
   '/bookstore/book[position()<3]' \
   books.xml
+echo -e '\n' '//title[@lang]' '\n'
 xpath -q -e \
   '//title[@lang]' \
   books.xml
+echo -e '\n' '//title[@lang="eng"]' '\n'
 xpath -q -e \
   '//title[@lang="eng"]' \
   books.xml
+echo -e '\n' '/bookstore/book[price>35.00]' '\n'
 xpath -q -e \
   '/bookstore/book[price>35.00]' \
   books.xml
+echo -e '\n' '/bookstore/book[price>35.00]/title' '\n'
 xpath -q -e \
   '/bookstore/book[price>35.00]/title' \
   books.xml
+echo -e '\n' '/bookstore/*' '\n'
+xpath -q -e \
+  '/bookstore/*' \
+  books.xml
+echo -e '\n' '//*' '\n'
+xpath -q -e \
+  '//*' \
+  books.xml
+echo -e '\n' '//title[@*]' '\n'
+xpath -q -e \
+  '//title[@*]' \
+  books.xml
+echo -e '\n' '/bookstore/book[attribute::cat!="fiction" and price>50.00]/title' '\n'
 xpath -q -e \
   '/bookstore/book[attribute::cat!="fiction" and price>50.00]/title' \
   books.xml
+echo -e '\n' '/bookstore/book[attribute::cat="textbook"]/price/text()' '\n'
 xpath -q -e \
   '/bookstore/book[attribute::cat="textbook"]/price/text()' \
   books.xml
