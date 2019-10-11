@@ -55,4 +55,34 @@ echo -e '\n' '/playlist//*[not(@*)]' '\n'
 xpath -q -e \
   '/playlist//*[not(@*)]' \
   playlist.xml
+echo -e '\n' '//movie[@id="tt0307479"]' '\n'
+xpath -q -e \
+  '//movie[@id="tt0307479"]' \
+  playlist.xml
+echo -e '\n' '//movie[not(@id="tt0307479")]' '\n'
+xpath -q -e \
+  '//movie[not(@id="tt0307479")]' \
+  playlist.xml
+echo -e '\n' '//movie[@id="tt0307479"]//synopsis' '\n'
+xpath -q -e \
+  '//movie[@id="tt0307479"]//synopsis' \
+  playlist.xml
+echo -e '\n' '//person[
+        contains(
+            translate(
+                @name,
+                "ABCDEFGHIJKLMNOPQRSTUVWXZY",
+                "abcdefghijklmnopqrstuvwxyz"
+            ),
+            "matt")' '\n'
+xpath -q -e \
+  '//person[
+        contains(
+            translate(
+                @name,
+                "ABCDEFGHIJKLMNOPQRSTUVWXZY",
+                "abcdefghijklmnopqrstuvwxyz"
+            ),
+            "matt")' \
+  playlist.xml
 exit $?
