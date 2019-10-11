@@ -67,6 +67,26 @@ echo -e '\n' '//movie[@id="tt0307479"]//synopsis' '\n'
 xpath -q -e \
   '//movie[@id="tt0307479"]//synopsis' \
   playlist.xml
+echo -e '\n' '//person[position()=2]' '\n'
+xpath -q -e \
+  '//person[position()=2]' \
+  playlist.xml
+echo -e '\n' '//person[position()<3]' '\n'
+xpath -q -e \
+  '//person[position()<3]' \
+  playlist.xml
+echo -e '\n' '//person[last()]' '\n'
+xpath -q -e \
+  '//person[last()]' \
+  playlist.xml
+echo -e '\n' '//cast[count(person)=3]' '\n'
+xpath -q -e \
+  '//cast[count(person)=3]' \
+  playlist.xml
+echo -e '\n' '//*[name()="genre"]' '\n'
+xpath -q -e \
+  '//*[name()="genre"]' \
+  playlist.xml
 echo -e '\n' '//person[
         contains(
             translate(
