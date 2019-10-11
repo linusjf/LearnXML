@@ -11,4 +11,12 @@ echo -e '\n' '/bookstore/book/price[text()]' '\n'
 xpath -q -e \
   '/bookstore/book/price[text()]' \
   books1.xml
+echo -e '\n' '/bookstore/book[price>35]/price' '\n'
+xpath -q -e \
+  '/bookstore/book[price>35]/price' \
+  books1.xml
+echo -e '\n' '/bookstore/book[price>35]/title' '\n'
+xpath -q -e \
+  '/bookstore/book[price>35]/title' \
+  books1.xml
 exit $?
