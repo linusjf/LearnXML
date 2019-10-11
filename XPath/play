@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+echo -e '\n' '/playlist/movie/title' '\n'
+xpath -q -e \
+  '/playlist/movie/title' \
+  playlist.xml
+  echo -e '\n' '/playlist/movie/title/text() | /playlist/movie/director/text() | /playlist/movie/running-time/text() | /playlist/movie/mpaa-rating/text() | /playlist/movie/cast/person/@name ' '\n'
+xpath -q -e \
+  '/playlist/movie/title/text() | /playlist/movie/director/text() | /playlist/movie/running-time/text() | /playlist/movie/mpaa-rating/text() | /playlist/movie/cast/person/@name' \
+  playlist.xml
+exit $?
