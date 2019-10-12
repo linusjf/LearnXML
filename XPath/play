@@ -107,6 +107,30 @@ echo -e '\n' '//person[starts-with(@name, 'K')]' '\n'
 xpath -q -e \
   '//person[starts-with(@name, "K")]' \
   playlist.xml
+echo -e '\n' '//director/text()' '\n'
+xpath -q -e \
+  '//director/text()' \
+  playlist.xml
+echo -e '\n' '//cast/text()' '\n'
+xpath -q -e \
+  '//cast/text()' \
+  playlist.xml
+  echo -e '\n' 'translate(normalize-space(//cast/text())," &#9;&#10;&#13;","")' '\n'
+xpath -q -e \
+  'translate(normalize-space(//cast/text())," &#9;&#10;&#13;","")' \
+  playlist.xml
+echo -e '\n' '//cast/text()[not(.="")]' '\n'
+xpath -q -e \
+  '//cast/text()[not(.="")]' \
+  playlist.xml
+echo -e '\n' '//person[contains(@name,'Matt')]/parent::*' '\n'
+xpath -q -e \
+  '//person[contains(@name,'Matt')]/parent::*' \
+  playlist.xml
+echo -e '\n' '//person[contains(@name,'Matt')]/ancestor::movie' '\n'
+xpath -q -e \
+  '//person[contains(@name,"Matt")]/ancestor::movie' \
+  playlist.xml
 echo -e '\n' '//person[
         contains(
             translate(
