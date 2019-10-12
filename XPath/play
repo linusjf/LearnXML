@@ -123,13 +123,33 @@ echo -e '\n' '//cast/text()[not(.="")]' '\n'
 xpath -q -e \
   '//cast/text()[not(.="")]' \
   playlist.xml
-echo -e '\n' '//person[contains(@name,'Matt')]/parent::*' '\n'
-xpath -q -e \
-  '//person[contains(@name,'Matt')]/parent::*' \
-  playlist.xml
 echo -e '\n' '//person[contains(@name,'Matt')]/ancestor::movie' '\n'
 xpath -q -e \
   '//person[contains(@name,"Matt")]/ancestor::movie' \
+  playlist.xml
+echo -e '\n' '//genre[text()="drama"]/following-sibling::*' '\n'
+xpath -q -e \
+  '//genre[text()="drama"]/following-sibling::*' \
+  playlist.xml
+echo -e '\n' '//genre[text()="drama"]/following-sibling::genre' '\n'
+xpath -q -e \
+  '//genre[text()="drama"]/following-sibling::genre' \
+  playlist.xml
+echo -e '\n' '//genre[text()="drama"]/preceding-sibling::genre' '\n'
+xpath -q -e \
+  '//genre[text()="drama"]/preceding-sibling::genre' \
+  playlist.xml
+echo -e '\n' '//movie[@id="tt0112384"]/following::title' '\n'
+xpath -q -e \
+  '//movie[@id="tt0112384"]/following::title' \
+  playlist.xml
+echo -e '\n' '//movie[.//score/text() < 7.5]' '\n'
+xpath -q -e \
+  '//movie[.//score/text() < 7.5]' \
+  playlist.xml
+echo -e '\n' '//movie[.//score/text() > 8.0]//synopsis' '\n'
+xpath -q -e \
+  '//movie[.//score/text() > 8.0]//synopsis' \
   playlist.xml
 echo -e '\n' '//person[
         contains(
