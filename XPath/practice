@@ -131,4 +131,8 @@ echo -e '\n' '//bookstore/child::*/child::price' '\n'
 xpath -q -e \
   '//bookstore/child::*/child::price' \
   books.xml
+  echo -e '\n' '//comment()' '\n'
+xpath -q -e \
+  '//comment()' \
+  books.xml
 exit $?

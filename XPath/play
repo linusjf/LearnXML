@@ -181,4 +181,12 @@ xpath -q -e \
             ),
             "matt")' \
   playlist.xml
+echo -e '\n' 'count(//movie)' '\n'
+xpath -q -e \
+  'count(//movie)' \
+  playlist.xml
+echo -e '\n' 'sum(//score) div count(//movie)' '\n'
+xpath -q -e \
+  'sum(//score) div count(//movie)' \
+  playlist.xml
 exit $?
