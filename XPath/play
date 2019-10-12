@@ -189,4 +189,16 @@ echo -e '\n' 'sum(//score) div count(//movie)' '\n'
 xpath -q -e \
   'sum(//score) div count(//movie)' \
   playlist.xml
+echo -e '\n' 'round(sum(//score) div count(//movie))' '\n'
+xpath -q -e \
+  'round(sum(//score) div count(//movie))' \
+  playlist.xml
+echo -e '\n' 'ceiling(sum(//score) div count(//movie))' '\n'
+xpath -q -e \
+  'ceiling(sum(//score) div count(//movie))' \
+  playlist.xml
+echo -e '\n' 'floor(sum(//score) div count(//movie))' '\n'
+xpath -q -e \
+  'floor(sum(//score) div count(//movie))' \
+  playlist.xml
 exit $?
