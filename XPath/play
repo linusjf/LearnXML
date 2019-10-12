@@ -151,6 +151,18 @@ echo -e '\n' '//movie[.//score/text() > 8.0]//synopsis' '\n'
 xpath -q -e \
   '//movie[.//score/text() > 8.0]//synopsis' \
   playlist.xml
+echo -e '\n' '//director | //genre' '\n'
+xpath -q -e \
+  '//director | //genre' \
+  playlist.xml
+echo -e '\n' '//person[contains(@name, 'Bill') and contains(@role, 'Fred')]' '\n'
+xpath -q -e \
+  '//person[contains(@name, "Bill") and contains(@role, "Fred")]' \
+  playlist.xml
+echo -e '\n' '//person[@name="Kevin Bacon"]/../person[@name!="Kevin Bacon"]' '\n'
+xpath -q -e \
+  '//person[@name="Kevin Bacon"]/../person[@name!="Kevin Bacon"]' \
+  playlist.xml
 echo -e '\n' '//person[
         contains(
             translate(
