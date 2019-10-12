@@ -87,6 +87,26 @@ echo -e '\n' '//*[name()="genre"]' '\n'
 xpath -q -e \
   '//*[name()="genre"]' \
   playlist.xml
+echo -e '\n' '//*[starts-with(name(), 'running')]' '\n'
+xpath -q -e \
+  '//*[starts-with(name(), "running")]' \
+  playlist.xml
+echo -e '\n' '//person[contains(@name, 'Matt')]' '\n'
+xpath -q -e \
+  '//person[contains(@name, "Matt")]' \
+  playlist.xml
+echo -e '\n' '//person[contains(@name, 'matt')]' '\n'
+xpath -q -e \
+  '//person[contains(@name, "matt")]' \
+  playlist.xml
+echo -e '\n' '//person[not(contains(@name, 'e'))]' '\n'
+xpath -q -e \
+  '//person[not(contains(@name, "e"))]' \
+  playlist.xml
+echo -e '\n' '//person[starts-with(@name, 'K')]' '\n'
+xpath -q -e \
+  '//person[starts-with(@name, "K")]' \
+  playlist.xml
 echo -e '\n' '//person[
         contains(
             translate(
