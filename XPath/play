@@ -201,4 +201,24 @@ echo -e '\n' 'floor(sum(//score) div count(//movie))' '\n'
 xpath -q -e \
   'floor(sum(//score) div count(//movie))' \
   playlist.xml
+echo -e '\n' '//director/text()' '\n'
+xpath -q -e \
+  '//director/text()' \
+  playlist.xml
+echo -e '\n' '//director/text()[string-length(.)>0)]' '\n'
+xpath -q -e \
+  '//director/text()[string-length(.)>0]' \
+  playlist.xml
+echo -e '\n' '//director/text()[position()=1]' '\n'
+xpath -q -e \
+  '//director/text()[position()=1]' \
+  playlist.xml
+echo -e '\n' '//director[position()=1]' '\n'
+xpath -q -e \
+  '//director[position()=1]' \
+  playlist.xml
+  echo -e '\n' '//movie[position()=1]/director/text()' '\n'
+xpath -q -e \
+  '//movie[position()=1]/director/text()' \
+  playlist.xml
 exit $?
