@@ -27,4 +27,33 @@
       <score>7.8</score>
     </imdb-info>
   </movie>
+  <movie id="tt0254481">
+    <title>Koi...Mil Gaya</title>
+    <director>Rakesh Roshan</director>
+    <release-date>2003-01-01</release-date>
+    <mpaa-rating>Not rated</mpaa-rating>
+    <running-time>171</running-time>
+    <genre>action</genre>
+    <genre>drama</genre>
+    <genre>romance</genre>
+    <cast>
+      <person name="' '"
+              role="Jadoo" />
+      <person name="Rekha"
+              role="Sonia Mehra" />
+      <person name="Hrithik Roshan"
+              role="Rohit Mehra" />
+      <person name="Preity Zinta"
+              role="Nisha" />
+      <person name="Rakesh Roshan"
+              role="Sanjay Mehra" />
+    </cast>
+    <imdb-info url="https://m.imdb.com/title/tt0254481">
+      <synopsis>A developmentally disabled young man tries to
+      continue the work his father did in communicating with
+      extra-terrestrials from outer space, which leads to something
+      miraculous and wonderful.</synopsis>
+      <score>7.1</score>
+    </imdb-info>
+  </movie>
 </playlist>
