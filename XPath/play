@@ -217,7 +217,7 @@ echo -e '\n' '//director[position()=1]' '\n'
 xpath -q -e \
   '//director[position()=1]' \
   playlist.xml
-  echo -e '\n' '//movie[position()=1]/director/text()' '\n'
+echo -e '\n' '//movie[position()=1]/director/text()' '\n'
 xpath -q -e \
   '//movie[position()=1]/director/text()' \
   playlist.xml

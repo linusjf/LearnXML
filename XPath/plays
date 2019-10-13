@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+echo -e '\n' '//*[@*]' '\n'
+xpath -q -e \
+  '//*[@*]' \
+  plays.xml
+echo -e '\n' '/playlist//*[not(@*)]' '\n'
+xpath -q -e \
+  '/playlist//*[not(@*)]' \
+  plays.xml
+echo -e '\n' '//person[contains(@name, "&apos; &apos;")]' '\n'
+xpath -q -e \
+  '//person[contains(@name, "&apos; &apos;")]' \
+  plays.xml
+echo -e '\n' '//person[contains(@name, "&apos; &apos;")]' '\n'
+xpath -q -e \
+  '//person[contains(@name, "&apos; &apos;")]' \
+  plays.xml
+echo -e '\n' '//person[not(contains(@name, "&apos; &apos;"))]' '\n'
+xpath -q -e \
+  '//person[not(contains(@name, "&apos; &apos;"))]' \
+  plays.xml
+echo -e '\n' '//person[starts-with(@name, "&apos; &apos;")]' '\n'
+xpath -q -e \
+  '//person[starts-with(@name, "&apos; &apos;")]' \
+  plays.xml
+echo -e '\n' '//person[@name="&apos; &apos;"]/../person[@name!="&apos; &apos;"]' '\n'
+xpath -q -e \
+  '//person[@name="&apos; &apos;"]/../person[@name!="&apos; &apos;"]' \
+  plays.xml
+echo -e '\n' '//person[
+        contains(
+            translate(
+                @name,
+                "ABCDEFGHIJKLMNOPQRSTUVWXZY",
+                "abcdefghijklmnopqrstuvwxyz"
+            ),
+            "&apos; &apos;")' '\n'
+xpath -q -e \
+  '//person[
+        contains(
+            translate(
+                @name,
+                "ABCDEFGHIJKLMNOPQRSTUVWXZY",
+                "abcdefghijklmnopqrstuvwxyz"
+            ),
+            "&apos; &apos;")' \
+  plays.xml
+exit $?

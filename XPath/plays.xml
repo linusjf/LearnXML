@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<playlist>
+  <movie id="tt0083866">
+    <title>ET</title>
+    <director>Steven Spielberg</director>
+    <release-date>1982-06-30</release-date>
+    <mpaa-rating>PG-13</mpaa-rating>
+    <running-time>115</running-time>
+    <genre>family</genre>
+    <genre>scifi</genre>
+    <cast>
+      <person name="&apos; &apos;"
+              role="ET" />
+      <person name="Dee Wallace"
+              role="Mary" />
+      <person name="Henry Thorn"
+              role="Elliott" />
+      <person name="Peter Coyote"
+              role="Keys" />
+      <person name="Drew Barrymore"
+              role="Gertie" />
+    </cast>
+    <imdb-info url="https://m.imdb.com/title/tt0083866/">
+      <synopsis>A troubled child summons the courage to help a
+      friendly alien escape Earth and return to his home
+      world.</synopsis>
+      <score>7.8</score>
+    </imdb-info>
+  </movie>
+</playlist>
