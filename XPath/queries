@@ -18,4 +18,11 @@ echo
 echo Result:
 saxon -q:titleprice.query
 echo
+echo $'\n\n'
+echo Query:
+cat nonfiction.query
+echo
+echo Result:
+saxon -q:nonfiction.query
+echo
 exit $?
