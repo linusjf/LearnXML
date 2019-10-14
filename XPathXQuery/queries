@@ -1,48 +1,48 @@
 #!/usr/bin/env bash
 echo
 echo Query:
-cat books.query
+cat books.xquery
 echo 
 echo Result:
-saxon -q:books.query
+saxon -q:books.xquery
 echo $'\n\n'
 echo Query:
-cat booksnext.query
+cat booksnext.xquery
 echo
 echo Result:
-saxon -q:booksnext.query
+saxon -q:booksnext.xquery
 echo $'\n\n'
 echo Query:
-cat titleprice.query
+cat titleprice.xquery
 echo
 echo Result:
-saxon -q:titleprice.query
-echo
-echo $'\n\n'
-echo Query:
-cat nonfiction.query
-echo
-echo Result:
-saxon -q:nonfiction.query
-echo $'\n\n'
-echo Query:
-cat maxprice.query
-echo
-echo Result:
-saxon -q:maxprice.query
+saxon -q:titleprice.xquery
 echo
 echo $'\n\n'
 echo Query:
-cat catsummary.query
+cat nonfiction.xquery
 echo
 echo Result:
-saxon -q:catsummary.query
+saxon -q:nonfiction.xquery
+echo $'\n\n'
+echo Query:
+cat maxprice.xquery
+echo
+echo Result:
+saxon -q:maxprice.xquery
 echo
 echo $'\n\n'
 echo Query:
-cat catprice.query
+cat catsummary.xquery
 echo
 echo Result:
-saxon -q:catprice.query
+saxon -q:catsummary.xquery
+echo
+echo $'\n\n'
+echo Query:
+cat catprice.xquery
+echo
+echo Result:
+saxon -q:catprice.xquery
 echo
 exit $?
