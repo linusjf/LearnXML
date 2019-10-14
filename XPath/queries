@@ -11,5 +11,11 @@ cat booksnext.query
 echo
 echo Result:
 saxon -q:booksnext.query
+echo $'\n\n'
+echo Query:
+cat titleprice.query
+echo
+echo Result:
+saxon -q:titleprice.query
 echo
 exit $?
