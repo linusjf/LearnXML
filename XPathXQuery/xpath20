@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+echo "Printing out all the nodes in all xml documents in current directory."
+echo
+echo $"collection('file:///data/data/com.termux/files/home/LearnXML/XPathXQuery/?select=*.xml')//*" 
+echo
+saxon -qs:"collection('file:///data/data/com.termux/files/home/LearnXML/XPathXQuery/?select=*.xml')//*"
+echo
+exit $?
