@@ -31,4 +31,11 @@ echo
 echo Result:
 saxon -q:maxprice.query
 echo
+echo $'\n\n'
+echo Query:
+cat catsummary.query
+echo
+echo Result:
+saxon -q:catsummary.query
+echo
 exit $?
