@@ -24,5 +24,11 @@ cat nonfiction.query
 echo
 echo Result:
 saxon -q:nonfiction.query
+echo $'\n\n'
+echo Query:
+cat maxprice.query
+echo
+echo Result:
+saxon -q:maxprice.query
 echo
 exit $?
