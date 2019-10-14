@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+echo
+echo Query:
+cat books.query
+echo 
+echo Result:
+saxon -q:books.query
+echo $'\n\n'
+echo Query:
+cat booksnext.query
+echo
+echo Result:
+saxon -q:booksnext.query
+echo
+exit $?
