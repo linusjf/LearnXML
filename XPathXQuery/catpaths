@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+echo -e '\n' '/catalog/product' '\n'
+xpath -q -e \
+  '/catalog/product' \
+  catalog.xml

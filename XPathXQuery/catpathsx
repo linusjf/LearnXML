@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+echo -e '\n' '/catalog/product' '\n'
+saxon -qs:'/catalog/product' \
+  -s:catalog.xml
