@@ -10,6 +10,6 @@ echo Query:
 cat catdepts.xquery
 echo 
 echo Result:
-saxon -wrap -q:catdepts.xquery !param=dep
+saxon -wrap -q:catdepts.xquery
 echo $'\n\n'
 exit $?
