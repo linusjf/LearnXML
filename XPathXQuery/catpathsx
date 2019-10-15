@@ -5,4 +5,10 @@ saxon -qs:'/catalog/product' \
 echo -e '\n' '/*/product/@dept' '\n'
 saxon -wrap -qs:'/*/product/@dept' \
   -s:catalog.xml
+echo -e '\n' '//product/@dept' '\n'
+saxon -wrap -qs:'//product/@dept' \
+  -s:catalog.xml
+echo -e '\n' '/catalog/product[@dept = "ACC"]' '\n'
+saxon -qs:'/catalog/product[@dept = "ACC"]' \
+  -s:catalog.xml
 

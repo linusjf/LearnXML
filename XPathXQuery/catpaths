@@ -7,3 +7,11 @@ echo -e '\n' '/*/product/@dept' '\n'
 xpath -q -e \
   '/*/product/@dept' \
   catalog.xml
+echo -e '\n' '//product/@dept' '\n'
+xpath -q -e \
+  '//product/@dept' \
+  catalog.xml
+echo -e '\n' '/catalog/product[@dept = "ACC"]' '\n'
+xpath -q -e \
+  '/catalog/product[@dept = "ACC"]' \
+  catalog.xml
