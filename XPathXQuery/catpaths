@@ -15,3 +15,8 @@ echo -e '\n' '/catalog/product[@dept = "ACC"]' '\n'
 xpath -q -e \
   '/catalog/product[@dept = "ACC"]' \
   catalog.xml
+echo -e '\n' '/catalog/product[2]' '\n'
+xpath -q -e \
+  '/catalog/product[2]' \
+  catalog.xml
+exit $?

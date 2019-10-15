@@ -24,4 +24,10 @@ echo
 echo Result:
 saxon -q:catprods2.xquery
 echo $'\n\n'
+echo Query:
+cat catprods3.xquery
+echo 
+echo Result:
+saxon -q:catprods3.xquery
+echo $'\n\n'
 exit $?

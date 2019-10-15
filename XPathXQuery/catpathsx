@@ -11,4 +11,7 @@ saxon -wrap -qs:'//product/@dept' \
 echo -e '\n' '/catalog/product[@dept = "ACC"]' '\n'
 saxon -qs:'/catalog/product[@dept = "ACC"]' \
   -s:catalog.xml
-
+echo -e '\n' '/catalog/product[2]' '\n'
+saxon -qs:'/catalog/product[2]' \
+  -s:catalog.xml
+exit $?
