@@ -30,4 +30,22 @@ echo
 echo Result:
 saxon -q:catprods3.xquery
 echo $'\n\n'
+echo Query:
+cat catprods4.xquery
+echo 
+echo Result:
+saxon -q:catprods4.xquery
+echo $'\n\n'
+echo Query:
+cat catprods5.xquery
+echo 
+echo Result:
+saxon -q:catprods5.xquery
+echo $'\n\n'
+echo Query:
+cat catprods6.xquery
+echo 
+echo Result:
+saxon -q:catprods6.xquery
+echo $'\n\n'
 exit $?
