@@ -2,3 +2,7 @@
 echo -e '\n' '/catalog/product' '\n'
 saxon -qs:'/catalog/product' \
   -s:catalog.xml
+echo -e '\n' '/*/product/@dept' '\n'
+saxon -wrap -qs:'/*/product/@dept' \
+  -s:catalog.xml
+
