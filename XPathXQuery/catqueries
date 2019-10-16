@@ -60,4 +60,10 @@ echo
 echo Result:
 saxon -q:aggbydept.xquery
 echo $'\n\n'
+echo Query:
+cat catprods7.xquery
+echo 
+echo Result:
+saxon -q:catprods7.xquery
+echo $'\n\n'
 exit $?
