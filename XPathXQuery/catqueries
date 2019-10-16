@@ -108,4 +108,10 @@ echo
 echo Result:
 saxon -q:catcast.xquery
 echo $'\n\n'
+echo Query:
+cat catnumber.xquery
+echo 
+echo Result:
+saxon -q:catnumber.xquery
+echo $'\n\n'
 exit $?
