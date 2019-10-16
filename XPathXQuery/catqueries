@@ -114,4 +114,16 @@ echo
 echo Result:
 saxon -q:catnumber.xquery
 echo $'\n\n'
+echo Query:
+cat catcomp.xquery
+echo 
+echo Result:
+saxon -q:catcomp.xquery
+echo $'\n\n'
+echo Query:
+cat catcomp1.xquery
+echo 
+echo Result:
+saxon -q:catcomp1.xquery
+echo $'\n\n'
 exit $?
