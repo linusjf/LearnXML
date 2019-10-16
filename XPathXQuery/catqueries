@@ -84,4 +84,16 @@ echo
 echo Result:
 saxon -q:catdata.xquery
 echo $'\n\n'
+echo Query:
+cat catatomic.xquery
+echo 
+echo Result:
+saxon -q:catatomic.xquery
+echo $'\n\n'
+echo Query:
+cat catsequence.xquery
+echo 
+echo Result:
+saxon -q:catsequence.xquery
+echo $'\n\n'
 exit $?
