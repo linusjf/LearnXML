@@ -66,4 +66,22 @@ echo
 echo Result:
 saxon -q:catprods7.xquery
 echo $'\n\n'
+echo Query:
+cat catstring.xquery
+echo 
+echo Result:
+saxon -q:catstring.xquery
+echo $'\n\n'
+echo Query:
+cat catstring1.xquery
+echo 
+echo Result:
+saxon -q:catstring1.xquery
+echo $'\n\n'
+echo Query:
+cat catdata.xquery
+echo 
+echo Result:
+saxon -q:catdata.xquery
+echo $'\n\n'
 exit $?
