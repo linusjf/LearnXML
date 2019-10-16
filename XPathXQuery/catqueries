@@ -96,4 +96,16 @@ echo
 echo Result:
 saxon -q:catsequence.xquery
 echo $'\n\n'
+echo Query:
+cat catnocast.xquery
+echo 
+echo Result:
+saxon -q:catnocast.xquery
+echo $'\n\n'
+echo Query:
+cat catcast.xquery
+echo 
+echo Result:
+saxon -q:catcast.xquery
+echo $'\n\n'
 exit $?
