@@ -126,4 +126,28 @@ echo
 echo Result:
 saxon -q:catcomp1.xquery
 echo $'\n\n'
+echo Query:
+cat catcomp2.xquery
+echo 
+echo Result:
+saxon -q:catcomp2.xquery
+echo $'\n\n'
+echo Query:
+cat catproditem.xquery
+echo 
+echo Result:
+saxon -q:catproditem.xquery
+echo $'\n\n'
+echo Query:
+cat catcomp3.xquery
+echo 
+echo Result:
+saxon -q:catcomp3.xquery
+echo $'\n\n'
+echo Query:
+cat catcomp4.xquery
+echo 
+echo Result:
+saxon -q:catcomp4.xquery
+echo $'\n\n'
 exit $?
