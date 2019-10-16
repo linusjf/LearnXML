@@ -48,4 +48,16 @@ echo
 echo Result:
 saxon -q:catprods6.xquery
 echo $'\n\n'
+echo Query:
+cat catitems.xquery
+echo 
+echo Result:
+saxon -q:catitems.xquery
+echo $'\n\n'
+echo Query:
+cat aggbydept.xquery
+echo 
+echo Result:
+saxon -q:aggbydept.xquery
+echo $'\n\n'
 exit $?
