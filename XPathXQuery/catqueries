@@ -174,4 +174,34 @@ echo
 echo Result:
 saxon -q:catcond4.xquery
 echo $'\n\n'
+echo Query:
+cat catneg.xquery
+echo 
+echo Result:
+saxon -q:catneg.xquery
+echo $'\n\n'
+echo Query:
+cat catexpr.xquery
+echo 
+echo Result:
+saxon -q:catexpr.xquery
+echo $'\n\n'
+echo Query:
+cat catexpr2.xquery
+echo 
+echo Result:
+saxon -q:catexpr2.xquery
+echo $'\n\n'
+echo Query:
+cat catexpr3.xquery
+echo 
+echo Result:
+saxon -q:catexpr3.xquery
+echo $'\n\n'
+echo Query:
+cat catexpr4.xquery
+echo 
+echo Result:
+saxon -q:catexpr4.xquery
+echo $'\n\n'
 exit $?
