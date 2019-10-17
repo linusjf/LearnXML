@@ -17,7 +17,7 @@ fi
 
 if [ ! -z "$xqueryFile" ] && [ -f "$xqueryFile" ]
   then
-    execSaxon "$xqueryFile"
+    ./execsaxon "$xqueryFile"
     exit $?
 fi
 
