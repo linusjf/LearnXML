@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+execSaxon() {
+
+echo Query:
+cat "$1"
+echo 
+echo Result:
+saxon -q:"$1"
+return $?
+}
+
+$xqueryFile = $1
