@@ -1,13 +1,26 @@
 #!/usr/bin/env bash
 
-execSaxon() {
-
-echo Query:
-cat "$1"
-echo 
-echo Result:
-saxon -q:"$1"
-return $?
+usage() {
+        echo "usage: '$0' {xqueryFile}"
+        echo "xqueryFile -  must exist"
+        return 1
 }
 
-$xqueryFile = $1
+
+xqueryFile="$1"
+
+if [ ! -z "$xqueryFile" ] && [ ! -f "$xqueryFile" ]
+  then
+    usage
+    exit $?
+fi
+
+if [ ! -z "$xqueryFile" ] && [ -f "$xqueryFile" ]
+  then
+    execSaxon "$xqueryFile"
+    exit $?
+fi
+
+find . -maxdepth 1 -type f -name "*.xquery" | \
+  parallel -j 5 -I% --max-args 1 ./execsaxon %
+exit $?
