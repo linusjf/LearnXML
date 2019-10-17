@@ -10,13 +10,13 @@ echo Query:
 cat catdepts.xquery
 echo 
 echo Result:
-saxon -wrap -q:catdepts.xquery
+saxon -q:catdepts.xquery
 echo $'\n\n'
 echo Query:
 cat catdepts2.xquery
 echo 
 echo Result:
-saxon -wrap -q:catdepts2.xquery
+saxon -q:catdepts2.xquery
 echo $'\n\n'
 echo Query:
 cat catprods2.xquery
