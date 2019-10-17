@@ -150,4 +150,28 @@ echo
 echo Result:
 saxon -q:catcomp4.xquery
 echo $'\n\n'
+echo Query:
+cat catcond.xquery
+echo 
+echo Result:
+saxon -q:catcond.xquery
+echo $'\n\n'
+echo Query:
+cat catcond2.xquery
+echo 
+echo Result:
+saxon -q:catcond2.xquery
+echo $'\n\n'
+echo Query:
+cat catcond3.xquery
+echo 
+echo Result:
+saxon -q:catcond3.xquery
+echo $'\n\n'
+echo Query:
+cat catcond4.xquery
+echo 
+echo Result:
+saxon -q:catcond4.xquery
+echo $'\n\n'
 exit $?
