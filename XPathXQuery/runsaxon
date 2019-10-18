@@ -2,10 +2,9 @@
 
 usage() {
         echo "usage: '$0' {xqueryFile}"
-        echo "xqueryFile -  must exist"
+        echo "xqueryFile - optional but must exist when specified"
         return 1
 }
-
 
 xqueryFile="$1"
 
