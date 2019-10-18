@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-echo
-echo Query:
-cat prod_ns.xquery
-echo 
-echo Result:
-saxon -q:prod_ns.xquery
-echo $'\n\n'
