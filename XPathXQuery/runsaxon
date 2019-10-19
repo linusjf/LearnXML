@@ -6,7 +6,20 @@ usage() {
         return 1
 }
 
+execsax() {
+
+output="Query:\n\n"
+output+=$(cat "$1")
+output+="\n\n" 
+output+='Result:\n\n'
+output+=$(saxon -q:"$1")
+output+="\n\n"
+printf "$output"
+return $?
+}
+
 xqueryFile="$1"
+export -f execsax
 
 if [ ! -z "$xqueryFile" ] && [ ! -f "$xqueryFile" ]
   then
@@ -16,10 +29,10 @@ fi
 
 if [ ! -z "$xqueryFile" ] && [ -f "$xqueryFile" ]
   then
-    ./execsaxon "$xqueryFile"
+    execsax "$xqueryFile"
     exit $?
 fi
 
 find . -maxdepth 1 -type f -name "*.xquery" | \
-  parallel -j 5 -I% --max-args 1 ./execsaxon %
+  parallel -j 5 -I% --max-args 1 execsax %
 exit $?
