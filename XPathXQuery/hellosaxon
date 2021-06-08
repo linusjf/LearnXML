@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+echo -e '\n' '//*[@*]' '\n'
+saxon -qs:'//*[@*]' \
+  -s:Hello.java.xml
+echo -e '\n' '/MethodDeclaration//*[not(@*)]' '\n'
+saxon -qs:'/MethodDeclaration//*[not(@*)]' \
+  -s:Hello.java.xml
+echo $'\n //MethodDeclaration[contains(@Name, "main")] \n'
+saxon -qs:'//MethodDeclaration[contains(@Name, "main")]' \
+  -s:Hello.java.xml
+exit 0
+echo $'\n \'//person[contains(@name, concat("\'"," ","\'"))]\' \n'
+saxon -qs:'//person[contains(@name, concat("''"," ","''"))]' \
+  -s:plays.xml
+echo -e '\n' '//person[contains(@name, "&apos; &apos;")]' '\n'
+saxon -qs:'//person[contains(@name, "&apos; &apos;")]' \
+  -s:plays.xml
+echo -e '\n' '//person[contains(@name, "&apos; &apos;")]' '\n'
+saxon -qs:'//person[contains(@name, "&apos; &apos;")]' \
+  -s:plays.xml
+echo -e '\n' '//person[not(contains(@name, "&apos; &apos;"))]' '\n'
+saxon -qs:'//person[not(contains(@name, "&apos; &apos;"))]' \
+  -s:plays.xml
+echo -e '\n' '//person[starts-with(@name, "&apos; &apos;")]' '\n'
+saxon -qs:'//person[starts-with(@name, "&apos; &apos;")]' \
+  -s:plays.xml
+echo -e '\n' '//person[@name="&apos; &apos;"]/../person[@name!="&apos; &apos;"]' '\n'
+saxon -qs:'//person[@name="&apos; &apos;"]/../person[@name!="&apos; &apos;"]' \
+  -s:plays.xml
+exit $?
