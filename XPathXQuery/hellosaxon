@@ -8,4 +8,16 @@ saxon -qs:'/MethodDeclaration//*[not(@*)]' \
 echo $'\n //MethodDeclaration[contains(@Name, "main")] \n'
 saxon -qs:'//MethodDeclaration[contains(@Name, "main")]' \
   -s:Hello.java.xml
+echo $'\n //MethodDeclaration[contains(@Name, "main")] and child::MethodDeclaration[contains(@Static, "true")] \n'
+saxon -qs:'//MethodDeclaration[contains(@Name, "main")] and child::MethodDeclaration[contains(@Static, "true")]' \
+  -s:Hello.java.xml
+echo $'\n //MethodDeclaration[contains(@Static, "true")] \n'
+saxon -qs:'//MethodDeclaration[contains(@Static, "true")]' \
+  -s:Hello.java.xml
+echo $'\n ancestor-or-self::MethodDeclaration[contains(@Static, "true")] \n'
+saxon -qs:'ancestor-or-self::MethodDeclaration[contains(@Static, "true")]' \
+  -s:Hello.java.xml
+echo $'\n child::MethodDeclaration[contains(@Static, "true")] \n'
+saxon -qs:'child::MethodDeclaration[contains(@Static, "true")]' \
+  -s:Hello.java.xml
 exit 0
