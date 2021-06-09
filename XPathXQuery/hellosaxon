@@ -20,4 +20,16 @@ saxon -qs:'ancestor-or-self::MethodDeclaration[contains(@Static, "true")]' \
 echo $'\n child::MethodDeclaration[contains(@Static, "true")] \n'
 saxon -qs:'child::MethodDeclaration[contains(@Static, "true")]' \
   -s:Hello.java.xml
+echo $'\n //PrimaryPrefix/Name[contains(@Image, "System.out.println")] \n'
+saxon -qs:'//PrimaryPrefix/Name[contains(@Image, "System.out.println")]' \
+  -s:Hello.java.xml
+echo $'\n //PrimaryPrefix/Name[contains(@Image, "System.out.println")]/ancestor::MethodDeclaration[contains(@Static, "true")] \n'
+saxon -qs:'//PrimaryPrefix/Name[contains(@Image, "System.out.println")]/ancestor::MethodDeclaration[contains(@Static, "true")]' \
+  -s:Hello.java.xml
+echo $'\n //PrimaryPrefix/Name[contains(@Image, "System.out.println")]/ancestor::MethodDeclaration[contains(@Static, "true")] and //MethodDeclaration[contains(@Name, "main")]\n'
+saxon -qs:'//PrimaryPrefix/Name[contains(@Image, "System.out.println")]/ancestor::MethodDeclaration[contains(@Static, "true")] and //MethodDeclaration[contains(@Name, "main")]' \
+  -s:Hello.java.xml
+echo $'\n  //MethodDeclaration[contains(@Name, "main")] and //PrimaryPrefix/Name[contains(@Image, "System.out.println")]/ancestor::MethodDeclaration[contains(@Static, "true")]\n'
+saxon -qs:'//MethodDeclaration[contains(@Name, "main")] and //PrimaryPrefix/Name[contains(@Image, "System.out.println")]/ancestor::MethodDeclaration[contains(@Static, "true")]' \
+  -s:Hello.java.xml
 exit 0
